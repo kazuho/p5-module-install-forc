@@ -418,7 +418,7 @@ $target: @objects Makefile
 	$ld @{ $clone->{LDMODULEFLAGS} } @{[ $clone->_libpath ]} @{[ $clone->_libs ]} $clone->{LDFLAGS} -o $target @objects
 
 ...
-    $clone->_compile_objects($srcs, \@objects, @{$self->{CCCDLFLAGS}});
+    $clone->_compile_objects($srcs, \@objects, @{$self->{CCDLFLAGS}});
 
     return $target;
 }
@@ -440,7 +440,7 @@ $target: @objects Makefile
 	$clone->{RANLIB} $target
 
 ...
-    $clone->_compile_objects($srcs, \@objects, @{$self->{CCCDLFLAGS}});
+    $clone->_compile_objects($srcs, \@objects, @{$self->{CCDLFLAGS}});
 
     return $target;
 }
